@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ asset('favicon.svg?v=2') }}" type="image/svg+xml">
     <meta name="description" content="LINEから相談・予約できるマッサージ・ボディケアサロンのホームページデモです。">
     <meta name="theme-color" content="#f5f1e8">
     <title>suu massage &amp; body care｜LINE受付デモ</title>

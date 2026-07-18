@@ -3,9 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ asset('favicon.svg?v=2') }}" type="image/svg+xml">
     <meta name="description" content="整体・リラクゼーションサロン・教室など、小さなお店の情報と問い合わせ導線を分かりやすく整えるホームページ制作サービスです。">
-    <meta name="theme-color" content="#fbfaf6">
+    <meta name="theme-color" content="#f1fbff">
     <title>Relax Web｜小さなお店のネット周りをやさしく整えます</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     @vite(['resources/css/home.css', 'resources/js/app.js'])
 </head>
 <body>
@@ -39,12 +43,16 @@
     </section>
 
     <section class="rw-problems rw-section" id="problems">
-        <div class="rw-heading"><p>よくあるお悩み</p><h2>こんなお悩み、ありませんか？</h2><span>必要なのは、大がかりなシステムではなく、まず情報を分かりやすく整えることかもしれません。</span></div>
-        <div class="rw-problem-grid"><article><i>◎</i><p>Instagramだけで、料金やサービスが伝わりにくい</p></article><article><i>¥</i><p>ホームページを頼みたいが、費用や進め方が不安</p></article><article><i>話</i><p>LINEや問い合わせへの流れを分かりやすくしたい</p></article></div>
+        <x-section-heading label="よくあるお悩み" title="こんなお悩み、ありませんか？" description="必要なのは、大がかりなシステムではなく、まず情報を分かりやすく整えることかもしれません。" />
+        <div class="rw-problem-grid">
+            <article><div class="rw-problem-meta"><span>01</span><small>INFORMATION</small></div><h3>Instagramだけでは、<br>料金やサービスが伝わりにくい</h3><p>大切な情報が投稿に埋もれず、初めての方にも迷わず見つけてもらえる状態に。</p></article>
+            <article><div class="rw-problem-meta"><span>02</span><small>COST &amp; PROCESS</small></div><h3>費用や進め方が分からず、<br>依頼するのが不安</h3><p>何が必要で、どのように進むのか。専門用語を使わず、最初に分かりやすくご案内します。</p></article>
+            <article><div class="rw-problem-meta"><span>03</span><small>CONTACT FLOW</small></div><h3>LINEや問い合わせへの流れを、<br>もっと分かりやすくしたい</h3><p>お客様が次に何をすればよいか迷わない、自然で押しやすい相談導線を整えます。</p></article>
+        </div>
     </section>
 
     <section class="rw-services rw-section" id="services">
-        <div class="rw-heading"><p>サービス内容</p><h2>作るものではなく、<br>お店にとって良くなることから考えます。</h2><span>お客様が知りたい情報を見つけ、迷わず相談できる状態を整えます。</span></div>
+        <x-section-heading label="サービス内容" title="作るものではなく、<br>お店にとって良くなることから考えます。" description="お客様が知りたい情報を見つけ、迷わず相談できる状態を整えます。" />
         <div class="rw-service-grid">
             <article><span>01</span><h3>ホームページの情報を分かりやすく整える</h3><p>料金、メニュー、店舗情報、よくある質問を整理し、初めて見る方にもお店のことが伝わるページにします。</p><ul><li>メニュー・料金の整理</li><li>店舗情報・営業時間の掲載</li><li>アクセス案内の中でGoogleマップを活用</li><li>Instagramとホームページを連携</li></ul></article>
             <article><span>02</span><h3>問い合わせまでの流れを整える</h3><p>ホームページを見たあと、どこから相談すればよいか迷わない導線を作り、電話対応の負担も減らします。</p><ul><li>LINE公式アカウントへの導線</li><li>問い合わせフォームの設置</li><li>電話や既存予約サービスへのリンク</li><li>スマートフォンで押しやすいボタン</li></ul></article>
@@ -58,14 +66,14 @@
     </section>
 
     <section class="rw-examples rw-section" id="examples">
-        <div class="rw-heading"><p>制作例・デモ</p><h2>制作イメージをご覧いただけます</h2><span>料金・メニュー・店舗情報・LINEへの導線を、初めて見る方にも分かりやすく整理しています。</span></div>
+        <x-section-heading label="制作例・デモ" title="制作イメージをご覧いただけます" description="料金・メニュー・店舗情報・LINEへの導線を、初めて見る方にも分かりやすく整理しています。" />
         <div class="rw-example-grid rw-example-grid-single">
             <article><div class="rw-example-showcase"><div class="rw-demo-desktop"><small>suu massage &amp; body care</small><strong>疲れた日に、<br>気軽にLINEで。</strong><b>LINEで相談</b></div><div class="rw-demo-menu"><span>CARE MENU</span><p>ボディケア 60分</p><strong>6,000円</strong><p>オイルトリートメント</p></div><div class="rw-demo-phone"><small>suu</small><strong>空き状況も<br>LINEから</strong><b>相談する</b></div></div><div><p>マッサージ・ボディケアサロン向け</p><h3>複数の情報を迷わず見られるホームページ</h3><span class="rw-example-description">スマートフォン表示、料金・メニュー、店舗情報、問い合わせ導線まで確認できます。</span><a href="{{ route('demo2') }}">デモサイトを見る <span>→</span></a></div></article>
         </div>
     </section>
 
     <section class="rw-pricing rw-section" id="pricing">
-        <div class="rw-heading"><p>料金</p><h2>初期制作費なし。<br>月額5,500円の1プランです。</h2><span>最初に大きな費用をかけず、ホームページ制作と公開後のサポートをまとめてご利用いただけます。</span></div>
+        <x-section-heading label="料金" title="初期制作費なし。<br>月額5,500円の1プランです。" description="最初に大きな費用をかけず、ホームページ制作と公開後のサポートをまとめてご利用いただけます。" />
         <article class="rw-monthly-plan">
             <div class="rw-monthly-plan-head"><span>WEB SUPPORT PLAN</span><h3>ホームページ制作・更新サポート</h3><p><small>初期制作費</small><strong>0</strong><b>円</b></p><div class="rw-monthly-price"><small>月額</small><strong>{{ number_format(config('relax_web.prices.monthly')) }}</strong><span>円</span></div></div>
             <div class="rw-monthly-plan-body"><h4>月額5,500円に含まれるもの</h4><ul><li>1ページのホームページ制作</li><li>スマートフォン対応</li><li>メニュー・料金・店舗情報の整理と掲載</li><li>アクセス情報の掲載（必要に応じてGoogleマップを利用）</li><li>LINE・Instagram・問い合わせへの導線</li><li>よくある質問の掲載</li><li>公開後の軽微な文章・画像・営業時間変更</li><li>困ったときの相談サポート</li></ul><div class="rw-plan-pending"><strong>現在確認中の項目</strong><p>契約期間、解約条件、ドメインなどの実費、修正対応の範囲・回数は現在整理中です。確定後、契約前に分かりやすくご案内します。</p><!-- TODO: 契約条件・実費・修正対応範囲が確定したら正式な内容へ差し替える。 --></div><a href="#contact">このプランについて相談する <span>→</span></a></div>
@@ -74,12 +82,12 @@
     </section>
 
     <section class="rw-flow rw-section" id="flow">
-        <div class="rw-heading"><p>制作の流れ</p><h2>一つずつ確認しながら進めます</h2><span>最初から内容が決まっていなくても大丈夫です。</span></div>
+        <x-section-heading label="制作の流れ" title="一つずつ確認しながら進めます" description="最初から内容が決まっていなくても大丈夫です。" />
         <ol class="rw-flow-list"><li><b>1</b><div><h3>LINEまたはフォームから相談</h3><p>「まだ何も決まっていない」というご相談でも大丈夫です。</p></div></li><li><b>2</b><div><h3>お店の悩みや必要な内容を確認</h3><p>今困っていること、載せたい情報をお聞きします。</p></div></li><li><b>3</b><div><h3>内容と料金を提案</h3><p>作るページと費用を、分かりやすく事前にお伝えします。</p></div></li><li><b>4</b><div><h3>制作・確認</h3><p>画面を見ていただき、文章や色などを一緒に確認します。</p></div></li><li><b>5</b><div><h3>公開・サポート開始</h3><p>公開後の変更や分からないこともご相談いただけます。</p></div></li></ol>
     </section>
 
     <section class="rw-faq rw-section" id="faq">
-        <div class="rw-heading"><p>よくある質問</p><h2>ご相談前の気になること</h2></div>
+        <x-section-heading label="よくある質問" title="ご相談前の気になること" />
         <div class="rw-faq-list">
             <details><summary>パソコンが苦手でも大丈夫ですか？</summary><p>はい。専門用語をなるべく使わず、一つずつ確認しながら進めます。LINEやメールでのやり取りも可能です。</p></details>
             <details><summary>写真や文章が用意できません</summary><p>載せる内容の整理から一緒に考えます。写真についても、必要な種類や撮り方をご案内します。</p></details>
@@ -98,10 +106,20 @@
 
     <section class="rw-contact rw-section" id="contact">
         <div class="rw-contact-intro"><p>お問い合わせ</p><h2>まだ何も決まっていなくても大丈夫です。</h2><span>ホームページが必要かどうか分からない段階でも、気軽にご相談ください。</span><div class="rw-line-recommended">おすすめの相談方法</div><a class="rw-button rw-button-line" href="{{ $lineUrl }}" target="_blank" rel="noopener noreferrer">LINEで無料相談する <b>→</b></a><small class="rw-line-note">短いメッセージだけでも大丈夫です。無理な営業はしません。</small><div class="rw-contact-links"><a href="mailto:{{ $email }}">{{ $email }}</a><a href="{{ $instagramUrl }}" target="_blank" rel="noopener noreferrer">{{ config('relax_web.instagram_name') }}</a></div></div>
-        <div class="rw-form-wrap"><h3>フォームから相談する</h3><p>LINEを使わない方向けの補助窓口です。現在は画面サンプルのため送信できません。</p>
-            <!-- TODO: 問い合わせ送信先が決まり次第、FormRequest・CSRF付きPOST処理を接続する。 -->
-            <form class="rw-contact-form" onsubmit="return false;">
-                <label>お名前<span>必須</span><input type="text" name="name" autocomplete="name" required></label><label>メールアドレス<span>必須</span><input type="email" name="email" autocomplete="email" required></label><label>お店の業種<small>任意</small><input type="text" name="business_type" placeholder="例：整体、リラクゼーションサロン、教室"></label><label>相談したいこと<small>任意・短い文章で大丈夫です</small><textarea name="message" rows="4" placeholder="例：Instagramだけなので、ホームページが必要か相談したい"></textarea></label><button type="button" disabled aria-describedby="form-status">送信機能は準備中です</button><small id="form-status">※ 現在、このフォームからの送信はできません。LINEまたはメールをご利用ください。</small>
+        <div class="rw-form-wrap"><h3>フォームから相談する</h3><p>LINEを使わない方向けの補助窓口です。お名前とメールアドレスだけでも送信できます。</p>
+            @if (session('contact_success'))
+                <div class="rw-form-alert rw-form-alert-success" role="status">{{ session('contact_success') }}</div>
+            @endif
+            @if (session('contact_error'))
+                <div class="rw-form-alert rw-form-alert-error" role="alert">{{ session('contact_error') }}</div>
+            @endif
+            @if ($errors->any())
+                <div class="rw-form-alert rw-form-alert-error" role="alert">入力内容をご確認ください。</div>
+            @endif
+            <form class="rw-contact-form" method="post" action="{{ route('contact.store') }}">
+                @csrf
+                <div class="rw-honeypot" aria-hidden="true"><label>ウェブサイト<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                <label>お名前<span>必須</span><input type="text" name="name" value="{{ old('name') }}" autocomplete="name" required aria-invalid="{{ $errors->has('name') ? 'true' : 'false' }}">@error('name')<small class="rw-field-error">{{ $message }}</small>@enderror</label><label>メールアドレス<span>必須</span><input type="email" name="email" value="{{ old('email') }}" autocomplete="email" required aria-invalid="{{ $errors->has('email') ? 'true' : 'false' }}">@error('email')<small class="rw-field-error">{{ $message }}</small>@enderror</label><label>お店の業種<small>任意</small><input type="text" name="business_type" value="{{ old('business_type') }}" placeholder="例：整体、リラクゼーションサロン、教室" aria-invalid="{{ $errors->has('business_type') ? 'true' : 'false' }}">@error('business_type')<small class="rw-field-error">{{ $message }}</small>@enderror</label><label>相談したいこと<small>任意・短い文章で大丈夫です</small><textarea name="message" rows="4" placeholder="例：Instagramだけなので、ホームページが必要か相談したい" aria-invalid="{{ $errors->has('message') ? 'true' : 'false' }}">{{ old('message') }}</textarea>@error('message')<small class="rw-field-error">{{ $message }}</small>@enderror</label><button type="submit">相談内容を送信する</button><small>送信後、ご入力いただいたメールアドレスへご連絡します。</small>
             </form>
         </div>
     </section>

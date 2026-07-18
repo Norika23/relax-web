@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ asset('favicon.svg?v=2') }}" type="image/svg+xml">
     <meta name="description" content="整体・もみほぐし・個人サロンに寄り添うホームページ制作と予約導入支援。小さなお店の魅力を、伝わるかたちに整えます。">
     <meta name="theme-color" content="#f7f5ee">
     <title>Relax Web｜リラクゼーション店舗のホームページ制作</title>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Relax Web | 小さなサロンのためのホームページ制作</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-background": "#131d21",
+                "surface-tint": "#3c692b",
+                "on-surface": "#131d21",
+                "on-secondary-fixed-variant": "#41484a",
+                "surface-container-low": "#eaf5fa",
+                "inverse-on-surface": "#e7f3f7",
+                "on-primary": "#ffffff",
+                "inverse-primary": "#a1d489",
+                "on-secondary": "#ffffff",
+                "primary": "#3c692b",
+                "on-primary-fixed-variant": "#255015",
+                "surface-variant": "#d9e4e9",
+                "error-container": "#ffdad6",
+                "on-tertiary-container": "#383936",
+                "on-surface-variant": "#42493d",
+                "on-tertiary-fixed-variant": "#464744",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#f1fbff",
+                "secondary-fixed": "#dde4e6",
+                "outline": "#72796c",
+                "on-primary-fixed": "#052100",
+                "tertiary-fixed": "#e3e3de",
+                "background": "#f1fbff",
+                "error": "#ba1a1a",
+                "surface-bright": "#f1fbff",
+                "primary-fixed": "#bdf1a3",
+                "secondary": "#586062",
+                "surface-dim": "#d1dce0",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed": "#1b1c19",
+                "secondary-container": "#dae1e3",
+                "on-error-container": "#93000a",
+                "primary-container": "#7fb069",
+                "tertiary-container": "#a3a39f",
+                "on-error": "#ffffff",
+                "on-secondary-fixed": "#161d1f",
+                "surface-container-highest": "#d9e4e9",
+                "outline-variant": "#c2c9ba",
+                "on-secondary-container": "#5d6466",
+                "surface-container-high": "#dfeaef",
+                "tertiary": "#5e5f5b",
+                "tertiary-fixed-dim": "#c7c7c2",
+                "secondary-fixed-dim": "#c1c8ca",
+                "on-primary-container": "#174207",
+                "surface-container": "#e4f0f4",
+                "inverse-surface": "#283236",
+                "primary-fixed-dim": "#a1d489"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "container-margin": "24px",
+                "gutter": "16px",
+                "stack-gap": "32px",
+                "element-gap": "16px",
+                "section-gap": "80px"
+            },
+            "fontFamily": {
+                "body-lg": ["Noto Sans JP"],
+                "headline-lg-mobile": ["Noto Sans JP"],
+                "headline-md": ["Noto Sans JP"],
+                "display-lg": ["Noto Sans JP"],
+                "headline-lg": ["Noto Sans JP"],
+                "label-md": ["Noto Sans JP"],
+                "body-md": ["Noto Sans JP"]
+            },
+            "fontSize": {
+                "body-lg": ["16px", {"lineHeight": "1.8", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                "headline-lg-mobile": ["22px", {"lineHeight": "1.5", "letterSpacing": "0.04em", "fontWeight": "700"}],
+                "headline-md": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                "display-lg": ["32px", {"lineHeight": "1.5", "letterSpacing": "0.08em", "fontWeight": "700"}],
+                "headline-lg": ["24px", {"lineHeight": "1.6", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                "label-md": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                "body-md": ["14px", {"lineHeight": "1.8", "letterSpacing": "0.03em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f1fbff;
+            color: #131d21;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10 shadow-sm flex justify-between items-center px-container-margin py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface">Relax Web</h1>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors">
+            Contact
+        </button>
+</header>
+<main class="flex-grow pt-20 pb-24">
+<!-- Hero Section -->
+<section class="px-container-margin py-section-gap overflow-hidden">
+<div class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-gap items-center">
+<div class="space-y-6">
+<div class="inline-block px-3 py-1 bg-primary-container/20 text-primary rounded-full font-label-md text-label-md">
+                        整体・リラクゼーションサロン・教室など、小さなお店向け
+                    </div>
+<h2 class="font-display-lg text-display-lg leading-tight">
+                        ホームページのこと、<br/>
+<span class="text-primary">難しく考えなくて<br/>大丈夫です。</span>
+</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-md">
+                        ホームページを作るだけでなく、お客様が情報を見て、安心して問い合わせできるところまで整えます。
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline-md flex items-center justify-center gap-2 shadow-lg hover:scale-[0.98] transition-transform">
+                            LINEで無料相談する <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-headline-md flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors">
+                            制作例を見る
+                        </button>
+</div>
+</div>
+<div class="relative mt-8 lg:mt-0">
+<div class="relative z-10 rounded-3xl overflow-hidden soft-shadow bg-surface-container-lowest">
+<img class="w-full h-auto" data-alt="A clean, minimalist high-fidelity UI mockup of a spa website displayed on a sleek modern smartphone. The UI features soft sage green and cream tones with elegant Japanese typography and plenty of whitespace. The device is set against a serene, softly lit studio background with natural wooden textures and a hint of a green plant leaf in the corner, creating an atmosphere of professional wellness and calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRDXRehSlSTweOksrSFPQBxr4yW1dHwsBuabhQTBEGlMkoJqTPLjDlQ-Hx_l9aEejtFfPk1INWA5tY4_b7is_lO9KHNqxyr-yLQanBrEP36jqsthu7Nsl6K1CLL6UAsSFtoYoFBGnD7Ib7JSaO-8KGXr7nsukP7na1YnbjJXp5w1r94dOtnLPxiayVrjuumO7TD7Xpt69o8q3s-5TwE5qKxTv2BtqIxC2vDgonlsQrlpKjk06xGV6GC0klyML_SbOHqSHBrov8ydY"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-surface-container-low rounded-full blur-2xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="bg-surface-container-low py-section-gap px-container-margin">
+<div class="max-w-3xl mx-auto text-center mb-stack-gap">
+<p class="font-label-md text-label-md text-primary mb-2">よくあるお悩み</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">こんなお悩み、ありませんか？</h2>
+</div>
+<div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface p-8 rounded-2xl soft-shadow border border-outline-variant/10">
+<div class="w-12 h-12 bg-primary-container/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">photo_camera</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Instagramだけで、料金やサービスが伝わりにくい</h3>
+<p class="font-body-md text-body-md text-secondary">SNSだけでは過去の投稿に埋もれてしまい、最新の正確な情報を見つけるのが難しくなりがちです。</p>
+</div>
+<div class="bg-surface p-8 rounded-2xl soft-shadow border border-outline-variant/10">
+<div class="w-12 h-12 bg-primary-container/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">ホームページを頼みたいが、費用や進め方が不安</h3>
+<p class="font-body-md text-body-md text-secondary">高額な初期費用や複雑な専門用語。何から始めればいいのか分からない不安に寄り添います。</p>
+</div>
+<div class="bg-surface p-8 rounded-2xl soft-shadow border border-outline-variant/10">
+<div class="w-12 h-12 bg-primary-container/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">LINEや問い合わせへの流れを分かりやすくしたい</h3>
+<p class="font-body-md text-body-md text-secondary">「どこから予約すればいいの？」という迷いをなくし、スムーズな来店につなげます。</p>
+</div>
+</div>
+</section>
+<!-- Service Content Section (Bento Inspired) -->
+<section class="py-section-gap px-container-margin bg-white">
+<div class="max-w-screen-xl mx-auto">
+<div class="text-center mb-16">
+<p class="font-label-md text-label-md text-primary mb-2">サービス内容</p>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg">作るものではなく、<br class="md:hidden"/>お店にとって良くなることから考えます。</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-8 bg-surface-container-lowest p-10 rounded-3xl border border-outline-variant/20 soft-shadow group hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<div class="max-w-lg">
+<span class="font-label-md text-label-md text-primary/60 font-bold mb-4 block">01</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">ホームページの情報を分かりやすく整える</h3>
+<p class="font-body-lg text-body-lg text-secondary mb-6">
+                                    料金、メニュー、店舗情報、よくある質問を整理し、初めて見る方にもお店のことが伝わるページにします。
+                                </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-body-md"><span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> メニュー・料金の整理</li>
+<li class="flex items-center gap-2 font-body-md"><span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> 店舗情報・営業時間の掲載</li>
+<li class="flex items-center gap-2 font-body-md"><span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> アクセス案内（Googleマップ連携）</li>
+</ul>
+</div>
+<span class="material-symbols-outlined text-5xl text-primary/10 group-hover:text-primary/20 transition-colors hidden md:block">architecture</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-primary text-on-primary p-10 rounded-3xl soft-shadow">
+<span class="font-label-md text-label-md text-on-primary/60 font-bold mb-4 block">02</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">問い合わせの流れを整える</h3>
+<p class="font-body-md text-body-md text-on-primary/80 mb-6">
+                            LINE公式アカウントへの誘導やフォーム設置により、予約のハードルを下げます。
+                        </p>
+<div class="mt-auto pt-4 border-t border-on-primary/20">
+<span class="material-symbols-outlined text-4xl opacity-50">quick_phrases</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface p-10 rounded-3xl border border-outline-variant/20 soft-shadow">
+<span class="font-label-md text-label-md text-primary/60 font-bold mb-4 block">03</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">公開後も困らないようにサポート</h3>
+<p class="font-body-md text-body-md text-secondary">
+                            営業時間の変更や画像の差し替えなど、公開後の小さな悩みも相談可能です。
+                        </p>
+</div>
+<div class="md:col-span-8 bg-surface-container p-10 rounded-3xl border border-outline-variant/20 soft-shadow flex items-center gap-8">
+<div class="hidden lg:block w-1/3 rounded-2xl overflow-hidden">
+<img class="aspect-square object-cover" data-alt="A serene landscape photo featuring a minimalist Japanese Zen garden with smooth raked sand, a few perfectly placed mossy stones, and a soft, diffused natural light. The colors are predominantly off-white and deep greens, evoking a sense of balance and peace that aligns with the professional wellness brand of Relax Web." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBadSUyKUC3VcAPpjmaXd03w1BmhFr5S1y2dYVKACNAW9Dq_pXbgaWeCkBz785uv8kuMxhaDWXj5VV2qmZW6NShZ_GcvhXgvEpBcR1uPeF3HXlzR5NQodYVCY1PAX0PbgPn39UzLSmACMa3F8Yd6RXZy9gkkH0Hf-QOv15xdSbuhjunrCdBfi6boyfYoS4CQ5ZgWs4s0uNMMCvHKShkMpDZFubTX7LfsJ_IcDgYhQtjezZrkLaXfd_0WxCHltWoPJt9uuUBBU3yKeo"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-lg text-headline-lg mb-2">難しい専門用語は使いません</h3>
+<p class="font-body-lg text-body-lg text-secondary">
+                                ITが苦手な方でも安心して進められるよう、できるだけ普段の言葉で丁寧に説明いたします。
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-section-gap px-container-margin bg-surface-container-low overflow-hidden">
+<div class="max-w-screen-xl mx-auto">
+<div class="text-center mb-16">
+<p class="font-label-md text-label-md text-primary mb-2">料金</p>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg">初期制作費なし。<br/>月額5,500円の1プランです。</h2>
+<p class="font-body-md text-body-md text-secondary mt-4">最初に大きな費用をかけず、ホームページ制作と公開後のサポートをまとめてご利用いただけます。</p>
+</div>
+<div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+<div class="p-10 bg-primary flex flex-col justify-center items-center text-center text-on-primary">
+<span class="font-label-md text-label-md tracking-widest uppercase mb-4 opacity-80">Web Support Plan</span>
+<h3 class="font-headline-lg text-headline-lg mb-8">ホームページ制作・更新サポート</h3>
+<div class="mb-2 opacity-80 font-label-md">初期制作費</div>
+<div class="text-4xl font-bold mb-8">0<span class="text-xl ml-1">円</span></div>
+<div class="mb-2 opacity-80 font-label-md">月額</div>
+<div class="text-6xl font-bold">5,500<span class="text-2xl ml-1">円</span></div>
+<p class="text-xs mt-4 opacity-60">※価格は税込です</p>
+</div>
+<div class="p-10 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md mb-6 border-b border-outline-variant/20 pb-2">月額5,500円に含まれるもの</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+                                    1ページのホームページ制作
+                                </li>
+<li class="flex gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+                                    スマートフォン対応
+                                </li>
+<li class="flex gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+                                    メニュー・料金・アクセス情報の掲載
+                                </li>
+<li class="flex gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+                                    LINE・Instagram・問い合わせへの導線
+                                </li>
+<li class="flex gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+                                    公開後の軽微な文章・画像・営業時間変更
+                                </li>
+</ul>
+</div>
+<div class="mt-10">
+<button class="w-full bg-on-background text-white py-4 rounded-xl font-bold hover:bg-on-background/90 transition-all flex items-center justify-center gap-2">
+                                このプランについて相談する <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<p class="text-center text-secondary font-body-md mt-8">※ページ追加や大幅な機能追加が必要な場合は、作業前に内容をご相談します。</p>
+</div>
+</section>
+<!-- Workflow Section -->
+<section class="py-section-gap px-container-margin">
+<div class="max-w-screen-md mx-auto">
+<div class="text-center mb-16">
+<p class="font-label-md text-label-md text-primary mb-2">制作の流れ</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">一つずつ確認しながら進めます</h2>
+<p class="font-body-md text-body-md text-secondary mt-2">最初から内容が決まっていなくても大丈夫です。</p>
+</div>
+<div class="space-y-12 relative before:absolute before:left-[19px] md:before:left-1/2 before:top-4 before:bottom-4 before:w-0.5 before:bg-outline-variant/20">
+<!-- Step 1 -->
+<div class="relative flex flex-col md:flex-row md:items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+<h3 class="font-headline-md text-headline-md mb-2">LINEまたはフォームから相談</h3>
+<p class="font-body-md text-body-md text-secondary">まずは「まだ何も決まっていない」という段階でも気軽にご相談ください。</p>
+</div>
+<div class="z-10 absolute md:static left-0 top-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold order-1 md:order-2">1</div>
+<div class="md:w-1/2 md:pl-12 order-3"></div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col md:flex-row md:items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-12 order-3 md:order-1"></div>
+<div class="z-10 absolute md:static left-0 top-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold order-1 md:order-2">2</div>
+<div class="md:w-1/2 md:pl-12 order-2 md:order-3 text-left">
+<h3 class="font-headline-md text-headline-md mb-2">お店の悩みや必要な内容を確認</h3>
+<p class="font-body-md text-body-md text-secondary">今困っていること、載せたい情報をお聞きします。</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col md:flex-row md:items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+<h3 class="font-headline-md text-headline-md mb-2">制作・確認</h3>
+<p class="font-body-md text-body-md text-secondary">画面を見ていただき、文章や色味などを一緒に確認します。</p>
+</div>
+<div class="z-10 absolute md:static left-0 top-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold order-1 md:order-2">3</div>
+<div class="md:w-1/2 md:pl-12 order-3"></div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col md:flex-row md:items-center gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-12 order-3 md:order-1"></div>
+<div class="z-10 absolute md:static left-0 top-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold order-1 md:order-2">4</div>
+<div class="md:w-1/2 md:pl-12 order-2 md:order-3 text-left">
+<h3 class="font-headline-md text-headline-md mb-2">公開・サポート開始</h3>
+<p class="font-body-md text-body-md text-secondary">ホームページが公開された後も、相談窓口としてサポートを継続します。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap px-container-margin bg-surface-container-low/50">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-16">
+<p class="font-label-md text-label-md text-primary mb-2">よくある質問</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">ご相談前の気になること</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container/20 transition-colors">
+<span class="font-headline-md text-body-lg">パソコンが苦手でも大丈夫ですか？</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+</div>
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container/20 transition-colors">
+<span class="font-headline-md text-body-lg">写真や文章が用意できません</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+</div>
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container/20 transition-colors">
+<span class="font-headline-md text-body-lg">LINEで予約を受けられますか？</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+</div>
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container/20 transition-colors">
+<span class="font-headline-md text-body-lg">月額料金はずっと必要ですか？</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-container-margin" id="contact">
+<div class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<p class="font-label-md text-label-md text-primary mb-2">お問い合わせ</p>
+<h2 class="font-display-lg text-display-lg mb-8 leading-snug">まだ何も決まっていなくても<br/>大丈夫です。</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10">
+                        ホームページがどのような段階でも、気軽にご相談ください。お店の「これから」を一緒に考えましょう。
+                    </p>
+<div class="bg-primary/5 p-8 rounded-3xl space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-body-lg">relax_web_support@example.com</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<span class="font-body-lg">公式LINEでチャット相談</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-outline-variant/10">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-secondary">お名前 <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="山田 太郎" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-secondary">メールアドレス <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="example@mail.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-secondary">お店の種類</label>
+<input class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="例：整体院、リラクゼーションサロン、ヨガ教室" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-secondary">相談したいこと <span class="text-error">*</span></label>
+<textarea class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="現在の悩みや制作時期のご希望などをご記入ください" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-headline-md hover:bg-primary-container transition-all shadow-md" type="submit">
+                            内容を確認して送信する
+                        </button>
+<p class="text-center text-xs text-secondary">※通常2営業日以内に返信いたします。</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/20 w-full">
+<div class="flex flex-col items-center py-section-gap px-container-margin gap-element-gap text-center">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Relax Web</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Service</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Process</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">FAQ</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<p class="font-body-md text-body-md text-secondary">© 2024 Relax Web. All rights reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface rounded-t-xl border-t border-outline-variant/10 flex justify-around items-center h-16 px-4" style="box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.04);">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-md text-[10px]">Features</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-[10px]">Pricing</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span class="font-label-md text-[10px]">FAQ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary hover:bg-surface-container-low transition-colors" href="#contact">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-[10px]">Contact</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for accordion (demo purposes)
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('.material-symbols-outlined');
+                if (icon && (icon.textContent === 'add' || icon.textContent === 'remove')) {
+                    icon.textContent = icon.textContent === 'add' ? 'remove' : 'add';
+                }
+            });
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

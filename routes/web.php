@@ -1,10 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Demo\ReservationController;
 use App\Http\Controllers\Demo\Admin\{AuthController as AdminAuthController, DashboardController, ReservationController as AdminReservationController, ServiceController as AdminServiceController, StaffController as AdminStaffController, ScheduleController, BlockedTimeController};
 
 Route::view('/', 'home')->name('home');
+Route::post('/contact', [ContactController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('contact.store');
 Route::view('/old', 'welcome')->name('old');
 
 Route::view('/demo', 'demo')->name('demo');
