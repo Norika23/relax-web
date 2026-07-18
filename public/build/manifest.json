@@ -1,0 +1,62 @@
+{
+  "resources/css/admin.css": {
+    "file": "assets/admin-DKPGcUpB.css",
+    "src": "resources/css/admin.css",
+    "isEntry": true,
+    "name": "admin",
+    "names": [
+      "admin.css"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DC6KesTp.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/demo-links.css": {
+    "file": "assets/demo-links-BQuBhsFI.css",
+    "src": "resources/css/demo-links.css",
+    "isEntry": true,
+    "name": "demo-links",
+    "names": [
+      "demo-links.css"
+    ]
+  },
+  "resources/css/demo2.css": {
+    "file": "assets/demo2-BN_Uf655.css",
+    "src": "resources/css/demo2.css",
+    "isEntry": true,
+    "name": "demo2",
+    "names": [
+      "demo2.css"
+    ]
+  },
+  "resources/css/home.css": {
+    "file": "assets/home-BuNBoHEN.css",
+    "src": "resources/css/home.css",
+    "isEntry": true,
+    "name": "home",
+    "names": [
+      "home.css"
+    ]
+  },
+  "resources/css/reservation.css": {
+    "file": "assets/reservation-C_EwQ7sG.css",
+    "src": "resources/css/reservation.css",
+    "isEntry": true,
+    "name": "reservation",
+    "names": [
+      "reservation.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CIomGrQN.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
