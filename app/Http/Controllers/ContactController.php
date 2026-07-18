@@ -18,10 +18,14 @@ class ContactController extends Controller
         try {
             Mail::to(config('relax_web.email'))->send(new ContactInquiryMail($inquiry));
         } catch (Throwable $exception) {
-            Log::error('Contact form mail failed', [
-                'email' => $inquiry['email'],
-                'error' => $exception->getMessage(),
-            ]);
+            try {
+                Log::error('Contact form mail failed', [
+                    'email' => $inquiry['email'],
+                    'error' => $exception->getMessage(),
+                ]);
+            } catch (Throwable) {
+                // The visitor should still receive a useful response if server logging is unavailable.
+            }
 
             return back()
                 ->withInput()
