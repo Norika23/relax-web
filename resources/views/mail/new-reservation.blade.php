@@ -1,0 +1,1 @@
+<h1>新しい予約が入りました</h1><ul><li>日時：{{ $reservation->starts_at->setTimezone($reservation->shop->timezone)->format('Y年n月j日 H:i') }}</li><li>お客さま：{{ $reservation->customer_name }}</li><li>電話：{{ $reservation->phone }}</li><li>メニュー：{{ $reservation->service->name }}</li><li>スタッフ：{{ $reservation->staff->name }}</li></ul><p>管理画面で詳細をご確認ください。</p>
