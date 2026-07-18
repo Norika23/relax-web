@@ -18,7 +18,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
     margin: 0;
-    padding-bottom: 76px;
+    padding-bottom: 0;
     color: var(--rw-ink);
     background: var(--rw-bg);
     font-family: "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
@@ -83,14 +83,14 @@ button, input, textarea { font: inherit; }
 
 main { padding-top: 72px; }
 .rw-hero {
-    padding: 80px 24px;
+    padding: 42px 24px 72px;
     display: grid;
     gap: 48px;
     background: var(--rw-bg);
     overflow: hidden;
 }
 .rw-hero-copy, .rw-hero-visual { width: 100%; max-width: 600px; margin-inline: auto; }
-.rw-kicker { width: max-content; max-width: 100%; margin: 0 0 18px; padding: 6px 13px; color: var(--rw-primary); background: var(--rw-primary-soft); border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .08em; }
+.rw-kicker { width: max-content; max-width: 100%; margin: 0 auto 18px; padding: 6px 13px; color: var(--rw-primary); background: var(--rw-primary-soft); border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-align: center; }
 .rw-hero h1 { margin: 0 0 22px; font-size: clamp(32px, 8.7vw, 48px); line-height: 1.5; letter-spacing: .05em; }
 .rw-hero h1 em { color: var(--rw-primary); font-style: normal; }
 .rw-hero-lead { max-width: 570px; margin: 0; color: var(--rw-muted); font-size: 16px; line-height: 1.9; }
@@ -272,16 +272,15 @@ main { padding-top: 72px; }
 .rw-footer nav { margin: 27px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
 .rw-footer nav a { color: var(--rw-muted); font-size: 12px; }
 .rw-footer > small { color: #7b8581; font-size: 11px; }
-.rw-mobile-line { position: fixed; z-index: 45; left: 12px; right: 12px; bottom: 10px; min-height: 58px; padding: 13px 22px; display: flex; align-items: center; justify-content: center; gap: 22px; color: #fff; background: var(--rw-line-green); border-radius: 14px; box-shadow: 0 10px 30px rgba(28, 85, 52, .28); font-size: 15px; font-weight: 700; }
-
 @media (min-width: 768px) {
     body { padding-bottom: 0; }
     .rw-header { height: 78px; padding-inline: 5vw; }
     main { padding-top: 78px; }
-    .rw-mobile-menu, .rw-mobile-line { display: none; }
+    .rw-mobile-menu { display: none; }
     .rw-desktop-nav { display: flex; align-items: center; gap: 20px; font-size: 12px; font-weight: 500; }
     .rw-header-line { min-height: 42px; padding: 9px 17px; display: flex; align-items: center; color: #fff; background: var(--rw-primary); border-radius: 9px; font-size: 12px; font-weight: 700; }
     .rw-hero { min-height: 690px; padding: 92px 5vw; grid-template-columns: minmax(0, 1fr) minmax(390px, .9fr); align-items: center; gap: 5vw; }
+    .rw-kicker { margin-left: 0; }
     .rw-hero-copy { max-width: 650px; }
     .rw-hero h1 { font-size: clamp(39px, 4vw, 58px); line-height: 1.45; }
     .rw-hero-actions { grid-template-columns: minmax(230px, 1fr) minmax(180px, .7fr); max-width: 540px; }

@@ -32,7 +32,7 @@
             <h1>ホームページのこと、<br><em>難しく考えなくて大丈夫です。</em></h1>
             <p class="rw-hero-lead">整体・リラクゼーションサロン・教室など、小さなお店向けのホームページ制作サービスです。専門用語をなるべく使わず、相談しながら一緒に作ります。</p>
             <p class="rw-hero-message">ホームページを作るだけではなく、お客様が情報を見て、安心して問い合わせできるところまで整えます。</p>
-            <div class="rw-hero-actions"><a class="rw-button rw-button-line" href="{{ $lineUrl }}" target="_blank" rel="noopener noreferrer">LINEで無料相談する <span>→</span></a><a class="rw-button rw-button-outline" href="#examples">制作例を見る</a></div>
+            <div class="rw-hero-actions"><a class="rw-button rw-button-line" href="{{ $lineUrl }}" target="_blank" rel="noopener noreferrer">LINEで無料相談する <span>→</span></a><a class="rw-button rw-button-outline" href="#services">サービス内容を見る</a></div>
             <ul class="rw-assurance"><li>相談無料</li><li>無理な営業なし</li><li>必要なものだけ提案</li><li>ITが苦手でも大丈夫</li></ul>
         </div>
         <div class="rw-hero-visual" aria-label="小さなお店のホームページがパソコンとスマートフォンに表示されているイメージ">
@@ -65,13 +65,6 @@
         <div class="rw-feature-list"><article><b>1</b><div><h3>難しい専門用語をなるべく使いません</h3><p>分からない言葉をそのままにせず、できるだけ普段の言葉で説明します。</p></div></article><article><b>2</b><div><h3>必要のない機能は無理に勧めません</h3><p>まずは必要な情報と問い合わせ導線を整え、費用をかけすぎない方法を考えます。</p></div></article><article><b>3</b><div><h3>完成後も相談できます</h3><p>営業時間や写真の変更など、公開後の小さな困りごともご相談ください。</p></div></article></div>
     </section>
 
-    <section class="rw-examples rw-section" id="examples">
-        <x-section-heading label="制作例・デモ" title="制作イメージをご覧いただけます" description="料金・メニュー・店舗情報・LINEへの導線を、初めて見る方にも分かりやすく整理しています。" />
-        <div class="rw-example-grid rw-example-grid-single">
-            <article><div class="rw-example-showcase"><div class="rw-demo-desktop"><small>suu massage &amp; body care</small><strong>疲れた日に、<br>気軽にLINEで。</strong><b>LINEで相談</b></div><div class="rw-demo-menu"><span>CARE MENU</span><p>ボディケア 60分</p><strong>6,000円</strong><p>オイルトリートメント</p></div><div class="rw-demo-phone"><small>suu</small><strong>空き状況も<br>LINEから</strong><b>相談する</b></div></div><div><p>マッサージ・ボディケアサロン向け</p><h3>複数の情報を迷わず見られるホームページ</h3><span class="rw-example-description">スマートフォン表示、料金・メニュー、店舗情報、問い合わせ導線まで確認できます。</span><a href="{{ route('demo2') }}">デモサイトを見る <span>→</span></a></div></article>
-        </div>
-    </section>
-
     <section class="rw-pricing rw-section" id="pricing">
         <x-section-heading label="料金" title="初期制作費なし。<br>月額5,500円の1プランです。" description="最初に大きな費用をかけず、ホームページ制作と公開後のサポートをまとめてご利用いただけます。" />
         <article class="rw-monthly-plan">
@@ -95,7 +88,6 @@
             <details><summary>LINEで予約を受けられますか？</summary><p>はい。LINE公式アカウントへの分かりやすい導線を設置できます。必要に応じて初期設定もサポートします。</p></details>
             <details><summary>ホームページ完成後の更新はどうなりますか？</summary><p>更新サポートをご利用いただけます。料金や営業時間、写真などの軽微な変更をご相談ください。</p></details>
             <details><summary>月額料金は必ず必要ですか？</summary><p>現在ご案内しているサービスは月額5,500円のプランです。契約期間や解約条件、別途必要になる実費については現在整理中のため、確定後に契約前のご案内へ明記します。</p></details>
-            <details><summary>制作にはどれくらいかかりますか？</summary><p>内容や資料の準備状況によりますが、目安は3〜6週間です。ご希望時期を確認してご案内します。</p></details>
             <details><summary>遠方のお店でも依頼できますか？</summary><p>はい。LINE、メール、オンライン通話などを使って全国からご相談いただけます。</p></details>
         </div>
     </section>
@@ -106,7 +98,7 @@
 
     <section class="rw-contact rw-section" id="contact">
         <div class="rw-contact-intro"><p>お問い合わせ</p><h2>まだ何も決まっていなくても大丈夫です。</h2><span>ホームページが必要かどうか分からない段階でも、気軽にご相談ください。</span><div class="rw-line-recommended">おすすめの相談方法</div><a class="rw-button rw-button-line" href="{{ $lineUrl }}" target="_blank" rel="noopener noreferrer">LINEで無料相談する <b>→</b></a><small class="rw-line-note">短いメッセージだけでも大丈夫です。無理な営業はしません。</small><div class="rw-contact-links"><a href="mailto:{{ $email }}">{{ $email }}</a><a href="{{ $instagramUrl }}" target="_blank" rel="noopener noreferrer">{{ config('relax_web.instagram_name') }}</a></div></div>
-        <div class="rw-form-wrap"><h3>フォームから相談する</h3><p>LINEを使わない方向けの補助窓口です。お名前とメールアドレスだけでも送信できます。</p>
+        <div class="rw-form-wrap"><h3>フォームから相談する</h3><p>お名前とメールアドレスだけでも送信できます。</p>
             @if (session('contact_success'))
                 <div class="rw-form-alert rw-form-alert-success" role="status">{{ session('contact_success') }}</div>
             @endif
@@ -126,6 +118,5 @@
 </main>
 
 <footer class="rw-footer"><a class="rw-logo" href="#top"><span>R</span><strong>Relax Web<small>小さなお店のWebサポート</small></strong></a><p>ITが苦手な小さなお店の、ネット周りを分かりやすく。</p><nav><a href="#services">サービス内容</a><a href="#pricing">料金</a><a href="#flow">制作の流れ</a><a href="#faq">よくある質問</a><a href="{{ $instagramUrl }}" target="_blank" rel="noopener noreferrer">Instagram</a></nav><small>© {{ date('Y') }} Relax Web</small></footer>
-<a class="rw-mobile-line" href="{{ $lineUrl }}" target="_blank" rel="noopener noreferrer">LINEで無料相談する <span>→</span></a>
 </body>
 </html>
